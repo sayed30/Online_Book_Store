@@ -1,0 +1,11 @@
+
+.head {
+	border: 1px solid black;
+	text-align: center;
+	font-weight: bold;
+}
+
+.col {
+	border: 1px solid black;
+	text-align: left;
+}

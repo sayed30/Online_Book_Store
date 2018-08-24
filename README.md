@@ -1,2 +1,1 @@
-# E-Commerce
-CSCI 4050 Term Project
+Online Book Store using HTML, JavaScript, Java Servlet, and SQL

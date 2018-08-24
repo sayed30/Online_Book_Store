@@ -1,0 +1,22 @@
+.browsebutton {
+	color: rgba(255,255,255,.5); 
+	text-decoration: none;
+	padding-left: 5;
+	padding-right: 5;
+	margin-right: 5px;
+	border-left: 0;
+	border-right: 0;
+	cursor: pointer;
+}
+
+.browsebutton:hover {
+	color: rgba(255,255,255,.75);
+	text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

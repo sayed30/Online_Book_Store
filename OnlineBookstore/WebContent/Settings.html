@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-store" />
+        <title>Settings</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="User information form snippet with timezones" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        
+        <script src="js/jquery.js" type="text/javascript"></script>
+	
+		<script src="js/profile.js" type="text/javascript"></script>
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
+         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="css/browsebutton.css" rel="stylesheet">
+
+
+
+
+
+
+
+        <!-- CSS code from Bootply.com editor -->
+        
+        <style type="text/css">
+            /* CSS used here will be applied after bootstrap.css */
+        </style>
+    </head>
+    
+    <!-- HTML code from Bootply.com editor -->
+    
+    <body style="display: none;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Book Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" id="home" href="#">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li id="addressTab" class="nav-item">
+            	<form class="nav-link" action="CustomerServlet" method="post">
+              		<button type="submit" class="btn btn-link browsebutton"  name="viewAddress" id="viewAddress" value="My Addresses">Addresses</button>
+              	</form>
+            </li>
+              <li id="creditTab" class="nav-item">
+             	<form class="nav-link" action="CustomerServlet" method="post">
+              		<button type="submit" class="btn btn-link browsebutton"  name="viewCreditCard" id="viewCreditCard" value="My Credit Cards">Credit Cards</button>
+              	</form>
+              </li>
+            <li class="nav-item">
+            	<a class="nav-link" href="password.html">Change Password</a>
+            </li>
+            <li class="nav-item">
+					<a class="nav-link logout" id="logout" href="#">Logout</a>
+			</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <div class="container">
+    <h1>Edit Profile</h1>
+  	<hr>
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <br>
+        <br>
+        <h3>Personal info</h3>
+        
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">First name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" maxlength="45" type="text" id="fname" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Last name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" maxlength="45" type="text" id="lname" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email: (Cannot be changed.)</label>
+            <div class="col-lg-8">
+              <input class="form-control" maxlength="45" type="email" id="email" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Phone:</label>
+            <div class="col-md-8">
+              <input class="form-control" maxlength="10"type="text" id="phone" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Subscribe to promotions: </label>
+            <div class="col-md-8">
+             	<input type="checkbox" id="sub" name="sub"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <button type="button" class="btn btn-primary" id="save">Save Changes</button>
+              <span></span>
+              <input type="reset" class="btn btn-default" value="Cancel">
+            </div>
+            <br>
+            <div class="col-md-8">
+            <p id="messagePara"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+<hr>
+        
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+
+        <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+        
+        <style>
+            .ad {
+              position: absolute;
+              bottom: 70px;
+              right: 48px;
+              z-index: 992;
+              background-color:#f3f3f3;
+              position: fixed;
+              width: 155px;
+              padding:1px;
+            }
+            
+            .ad-btn-hide {
+              position: absolute;
+              top: -10px;
+              left: -12px;
+              background: #fefefe;
+              background: rgba(240,240,240,0.9);
+              border: 0;
+              border-radius: 26px;
+              cursor: pointer;
+              padding: 2px;
+              height: 25px;
+              width: 25px;
+              font-size: 14px;
+              vertical-align:top;
+              outline: 0;
+            }
+            
+            .carbon-img {
+              float:left;
+              padding: 10px;
+            }
+            
+            .carbon-text {
+              color: #888;
+              display: inline-block;
+              font-family: Verdana;
+              font-size: 11px;
+              font-weight: 400;
+              height: 60px;
+              margin-left: 9px;
+              width: 142px;
+              padding-top: 10px;
+            }
+            
+            .carbon-text:hover {
+              color: #666;
+            }
+            
+            .carbon-poweredby {
+              color: #6A6A6A;
+              float: left;
+              font-family: Verdana;
+              font-size: 11px;
+              font-weight: 400;
+              margin-left: 10px;
+              margin-top: 13px;
+              text-align: center;
+            }
+        </style>
+       
+    </body>
+</html>
