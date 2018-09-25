@@ -1,1 +1,1 @@
-Online Book Store using HTML, JavaScript, Java Servlet, and SQL. Build with my team member for a school project. 
+Online Book Store using HTML, JavaScript, Java Servlet, and SQL. Built with my team member for a school project. 
